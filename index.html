@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zam Study Web</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-inner {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #0d47a1;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu-btn {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #0d47a1;
+  color: white;
+
+  font-size: 24px;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+nav a {
+  color: #333;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-radius: 7px;
+}
+
+nav a:hover {
+  background: #eaf2ff;
+  color: #0d47a1;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: white;
+  padding: 80px 0;
+}
+
+.hero-inner {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: #ffd54f;
+}
+
+.hero-text p {
+  max-width: 650px;
+  font-size: 19px;
+  color: #eaf2ff;
+  margin-bottom: 30px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 14px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 30px;
+
+  background: rgba(255,255,255,.12);
+
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.btn-white {
+  background: white;
+  color: #0d47a1;
+}
+
+.btn-outline {
+  color: white;
+  border: 1px solid white;
+}
+
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 20px;
+
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.hero-card-icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.hero-card h2 {
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 75px 0;
+}
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 45px;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #667085;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e5ea;
+  border-radius: 15px;
+  padding: 30px;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #667085;
+  margin-bottom: 20px;
+}
+
+.card-link {
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+
+/* =========================
+   LIGHT SECTION
+========================= */
+
+.light {
+  background: white;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1.4fr .8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.about p {
+  color: #667085;
+  margin-bottom: 15px;
+}
+
+.success-box {
+  background: #f5f8ff;
+  border: 1px solid #dce7ff;
+  border-radius: 18px;
+  padding: 35px;
+  text-align: center;
+}
+
+.success-box .icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  background: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 70px 0;
+}
+
+.cta h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  color: #dbeafe;
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #101827;
+  color: white;
+}
+
+.footer-inner {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+
+  padding: 50px 0;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+}
+
+.footer-inner p {
+  color: #aab5c5;
+  max-width: 500px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: #aab5c5;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  text-align: center;
+  padding: 18px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .hero-card {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 700px) {
+
+  .header-inner {
+    min-height: 64px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+
+    position: absolute;
+    left: 0;
+    top: 64px;
+
+    width: 100%;
+
+    background: white;
+
+    padding: 10px 4%;
+
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 13px;
+  }
+
+  .hero {
+    padding: 55px 0;
+  }
+
+  .hero-inner {
+    width: 90%;
+  }
+
+  .hero-text h1 {
+    font-size: 46px;
+  }
+
+  .hero-text p {
+    font-size: 17px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 55px 0;
+  }
+
+  .section-title h2 {
+    font-size: 29px;
+  }
+
+  .about h2 {
+    font-size: 29px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   SMALL PHONE
+========================= */
+
+@media (max-width: 400px) {
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a href="index.html" class="logo">
+      🇿🇲 Zam Study Web
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()">
+      ☰
+    </button>
+
+    <nav id="navigation">
+
+      <a href="index.html">Home</a>
+
+      <a href="study-materials.html">
+        Study Materials
+      </a>
+
+      <a href="scholarships.html">
+        Scholarships
+      </a>
+
+      <a href="tools.html">
+        Student Tools
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="hero-text">
+
+      <div class="badge">
+        🇿🇲 Made for Zambian Students
+      </div>
+
+      <h1>
+        Learn. Grow.
+        <span>Succeed.</span>
+      </h1>
+
+      <p>
+        Your simple online platform for study materials,
+        scholarships and useful academic resources.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          href="study-materials.html"
+          class="btn btn-white">
+          📚 Explore Study Materials
+        </a>
+
+        <a
+          href="scholarships.html"
+          class="btn btn-outline">
+          🎓 Find Scholarships
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <div class="hero-card-icon">
+        🎓
+      </div>
+
+      <h2>
+        Your Education Hub
+      </h2>
+
+      <p>
+        Resources designed to help Zambian students
+        study smarter and work towards their goals.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Everything You Need to Study Better
+      </h2>
+
+      <p>
+        Explore the main resources available on
+        Zam Study Web.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+      <div class="card">
+
+        <div class="card-icon">
+          📚
+        </div>
+
+        <h3>
+          Study Materials
+        </h3>
+
+        <p>
+          Find notes, modules, past papers and
+          other academic resources.
+        </p>
+
+        <a
+          href="study-materials.html"
+          class="card-link">
+          View Materials →
+        </a>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">
+          🎓
+        </div>
+
+        <h3>
+          Scholarships
+        </h3>
+
+        <p>
+          Discover scholarship opportunities and
+          useful application information.
+        </p>
+
+        <a
+          href="scholarships.html"
+          class="card-link">
+          View Scholarships →
+        </a>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">
+          🧮
+        </div>
+
+        <h3>
+          Student Tools
+        </h3>
+
+        <p>
+          Useful tools and resources to make
+          studying easier.
+        </p>
+
+        <a
+          href="tools.html"
+          class="card-link">
+          Explore Tools →
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section light">
+
+  <div class="container">
+
+    <div class="about">
+
+      <div>
+
+        <div class="badge"
+             style="color:#0d47a1;background:#eaf2ff;border:none;">
+          ABOUT ZAM STUDY WEB
+        </div>
+
+        <h2>
+          Built With Zambian Students in Mind
+        </h2>
+
+        <p>
+          Finding useful educational resources online
+          can sometimes be difficult.
+        </p>
+
+        <p>
+          Zam Study Web brings important academic
+          resources together in one simple place.
+        </p>
+
+        <a
+          href="about.html"
+          class="btn"
+          style="background:#0d47a1;color:white;">
+          Learn More
+        </a>
+
+      </div>
+
+
+      <div class="success-box">
+
+        <div class="icon">
+          🌟
+        </div>
+
+        <h3>
+          Your Success Matters
+        </h3>
+
+        <p>
+          Study consistently, keep learning and
+          work towards your academic goals.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <div class="container">
+
+    <h2>
+      Ready to Start Learning?
+    </h2>
+
+    <p>
+      Explore our study resources and take the
+      next step towards your academic goals.
+    </p>
+
+    <a
+      href="study-materials.html"
+      class="btn btn-white">
+      Start Studying →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <h3>
+        🇿🇲 Zam Study Web
+      </h3>
+
+      <p>
+        Empowering Zambian students through
+        knowledge, resources and education.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <strong>
+        Quick Links
+      </strong>
+
+      <a href="index.html">Home</a>
+
+      <a href="study-materials.html">
+        Study Materials
+      </a>
+
+      <a href="scholarships.html">
+        Scholarships
+      </a>
+
+      <a href="tools.html">
+        Student Tools
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    © 2026 Zam Study Web. All rights reserved.
+
+  </div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu() {
+
+  const menu = document.getElementById("navigation");
+
+  menu.classList.toggle("open");
+
+}
+
+</script>
+
+
+</body>
+</html>
