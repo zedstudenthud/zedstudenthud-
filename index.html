@@ -2,15 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Zam Study Web | Learn. Prepare. Succeed.</title>
+  <title>Zam Study Web | Study Resources for Zambian Students</title>
 
-  <meta name="description"
-    content="Zam Study Web is a learning platform for students in Zambia, providing study materials, scholarships, academic resources and useful student tools.">
-
-  <meta name="theme-color" content="#0b6b3a">
+  <meta name="description" content="Zam Study Web provides study materials, scholarships, academic resources and useful tools for students in Zambia.">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,48 +16,47 @@
   <!-- HEADER -->
   <header class="site-header">
 
-    <div class="logo-area">
-      <div class="logo-icon">🎓</div>
+    <div class="header-container">
 
-      <div>
-        <h1>Zam Study Web</h1>
-        <p>Learn. Prepare. Succeed.</p>
-      </div>
+      <a href="index.html" class="logo">
+        🇿🇲 <span>Zam Study Web</span>
+      </a>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+        ☰
+      </button>
+
+      <!-- NAVIGATION -->
+      <nav id="mainNav" class="main-nav">
+
+        <a href="index.html" class="active">Home</a>
+
+        <a href="study-materials.html">
+          Study Materials
+        </a>
+
+        <a href="scholarships.html">
+          Scholarships
+        </a>
+
+        <a href="tools.html">
+          Student Tools
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
     </div>
 
-    <button class="menu-button" onclick="toggleMenu()">
-      ☰
-    </button>
-
   </header>
-
-
-  <!-- NAVIGATION -->
-  <nav id="mobileMenu" class="navigation">
-
-    <a href="index.html">Home</a>
-
-    <a href="study-materials.html">
-      Study Materials
-    </a>
-
-    <a href="scholarships.html">
-      Scholarships
-    </a>
-
-    <a href="tools.html">
-      Student Tools
-    </a>
-
-    <a href="about.html">
-      About
-    </a>
-
-    <a href="contact.html">
-      Contact
-    </a>
-
-  </nav>
 
 
   <!-- HERO SECTION -->
@@ -69,251 +64,152 @@
 
     <section class="hero">
 
-      <div class="hero-badge">
-        🇿🇲 Made for students in Zambia
-      </div>
+      <div class="hero-container">
 
-      <h2>
-        Your learning journey,
-        <span>made easier.</span>
-      </h2>
+        <div class="hero-content">
 
-      <p>
-        Find study materials, scholarships, academic resources
-        and useful tools designed to help Zambian students learn,
-        prepare and succeed.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="study-materials.html"
-           class="primary-button">
-          📚 Explore Study Materials
-        </a>
-
-        <a href="scholarships.html"
-           class="secondary-button">
-          🎓 Find Scholarships
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- STUDY MATERIALS -->
-    <section class="section">
-
-      <div class="section-heading">
-
-        <span class="section-label">
-          STUDY
-        </span>
-
-        <h2>
-          Study Materials
-        </h2>
-
-        <p>
-          Access learning resources according to your level
-          of study.
-        </p>
-
-      </div>
-
-
-      <div class="cards">
-
-        <a href="study-materials.html#primary"
-           class="card">
-
-          <div class="card-icon">
-            📘
-          </div>
-
-          <h3>
-            Primary
-          </h3>
-
-          <p>
-            Learning resources and materials
-            for primary school pupils.
-          </p>
-
-          <span class="card-link">
-            Explore →
+          <span class="hero-badge">
+            🇿🇲 Made for Zambian Students
           </span>
 
-        </a>
-
-
-        <a href="study-materials.html#secondary"
-           class="card">
-
-          <div class="card-icon">
-            📗
-          </div>
-
-          <h3>
-            Secondary
-          </h3>
+          <h1>
+            Learn. Grow. <span>Succeed.</span>
+          </h1>
 
           <p>
-            Notes, revision resources and
-            materials for secondary students.
+            Your simple online platform for study materials,
+            scholarships and useful academic resources.
           </p>
 
-          <span class="card-link">
-            Explore →
-          </span>
+          <div class="hero-buttons">
 
-        </a>
+            <a href="study-materials.html" class="button button-primary">
+              📚 Explore Study Materials
+            </a>
 
+            <a href="scholarships.html" class="button button-secondary">
+              🎓 Find Scholarships
+            </a>
 
-        <a href="study-materials.html#university"
-           class="card">
+          </div>
 
-          <div class="card-icon">
+        </div>
+
+        <div class="hero-card">
+
+          <div class="hero-icon">
             🎓
           </div>
 
-          <h3>
-            University
-          </h3>
+          <h2>
+            Your Education Hub
+          </h2>
 
           <p>
-            Lecture notes, modules, quizzes
-            and university study resources.
+            Resources designed to help Zambian students
+            study smarter and discover opportunities.
           </p>
 
-          <span class="card-link">
-            Explore →
-          </span>
-
-        </a>
+        </div>
 
       </div>
 
     </section>
 
 
-    <!-- SCHOLARSHIPS -->
-    <section class="highlight-section">
-
-      <div class="highlight-content">
-
-        <span class="section-label">
-          OPPORTUNITIES
-        </span>
-
-        <h2>
-          Find Scholarships
-        </h2>
-
-        <p>
-          Discover scholarship and bursary opportunities
-          that can help you continue your education.
-        </p>
-
-        <a href="scholarships.html"
-           class="primary-button">
-          View Scholarships →
-        </a>
-
-      </div>
-
-      <div class="highlight-icon">
-        🎓
-      </div>
-
-    </section>
-
-
-    <!-- STUDENT TOOLS -->
+    <!-- FEATURES -->
     <section class="section">
 
-      <div class="section-heading">
+      <div class="section-container">
 
-        <span class="section-label">
-          TOOLS
-        </span>
+        <div class="section-heading">
 
-        <h2>
-          Student Tools
-        </h2>
+          <span class="small-title">
+            WHAT YOU CAN FIND
+          </span>
 
-        <p>
-          Simple tools to help you with your
-          academic work.
-        </p>
-
-      </div>
-
-
-      <div class="tools-grid">
-
-        <a href="tools.html#percentage"
-           class="tool-card">
-
-          <span>📊</span>
-
-          <h3>
-            Percentage Calculator
-          </h3>
+          <h2>
+            Everything You Need to Study Better
+          </h2>
 
           <p>
-            Calculate percentages quickly.
+            Explore the main sections of Zam Study Web.
           </p>
 
-        </a>
+        </div>
 
 
-        <a href="tools.html#average"
-           class="tool-card">
+        <div class="feature-grid">
 
-          <span>🧮</span>
+          <!-- STUDY MATERIALS -->
+          <div class="feature-card">
 
-          <h3>
-            Average Calculator
-          </h3>
+            <div class="feature-icon">
+              📚
+            </div>
 
-          <p>
-            Calculate your average marks.
-          </p>
+            <h3>
+              Study Materials
+            </h3>
 
-        </a>
+            <p>
+              Access learning materials, notes, modules,
+              past papers and other academic resources.
+            </p>
 
+            <a href="study-materials.html" class="card-link">
+              View Materials →
+            </a>
 
-        <a href="tools.html#grade"
-           class="tool-card">
-
-          <span>📈</span>
-
-          <h3>
-            Grade Calculator
-          </h3>
-
-          <p>
-            Work out your grades easily.
-          </p>
-
-        </a>
+          </div>
 
 
-        <a href="tools.html#timer"
-           class="tool-card">
+          <!-- SCHOLARSHIPS -->
+          <div class="feature-card">
 
-          <span>⏱️</span>
+            <div class="feature-icon">
+              🎓
+            </div>
 
-          <h3>
-            Study Timer
-          </h3>
+            <h3>
+              Scholarships
+            </h3>
 
-          <p>
-            Stay focused while studying.
-          </p>
+            <p>
+              Discover scholarship opportunities and
+              useful information to help with applications.
+            </p>
 
-        </a>
+            <a href="scholarships.html" class="card-link">
+              View Scholarships →
+            </a>
+
+          </div>
+
+
+          <!-- STUDENT TOOLS -->
+          <div class="feature-card">
+
+            <div class="feature-icon">
+              🧮
+            </div>
+
+            <h3>
+              Student Tools
+            </h3>
+
+            <p>
+              Useful tools and resources to make studying,
+              planning and learning easier.
+            </p>
+
+            <a href="tools.html" class="card-link">
+              Explore Tools →
+            </a>
+
+          </div>
+
+        </div>
 
       </div>
 
@@ -321,73 +217,58 @@
 
 
     <!-- WHY ZAM STUDY WEB -->
-    <section class="why-section">
+    <section class="section section-light">
 
-      <div class="section-heading">
+      <div class="section-container">
 
-        <span class="section-label">
-          WHY US
-        </span>
+        <div class="about-preview">
 
-        <h2>
-          Built for Zambian Students
-        </h2>
+          <div>
 
-      </div>
+            <span class="small-title">
+              WHY ZAM STUDY WEB?
+            </span>
 
+            <h2>
+              Built With Zambian Students in Mind
+            </h2>
 
-      <div class="why-grid">
+            <p>
+              Finding useful educational resources online can
+              sometimes be difficult. Zam Study Web brings
+              important academic resources together in one
+              simple place.
+            </p>
 
-        <div class="why-item">
+            <p>
+              Whether you are in primary school, secondary
+              school or university, our goal is to make
+              learning resources easier to find.
+            </p>
 
-          <div class="why-icon">
-            🇿🇲
+            <a href="about.html" class="button button-primary">
+              Learn More About Us
+            </a>
+
           </div>
 
-          <h3>
-            Made for Zambia
-          </h3>
 
-          <p>
-            Resources designed with Zambian
-            students in mind.
-          </p>
+          <div class="success-card">
 
-        </div>
+            <div class="success-icon">
+              🌟
+            </div>
 
+            <h3>
+              Your Success Matters
+            </h3>
 
-        <div class="why-item">
+            <p>
+              Study consistently, discover opportunities
+              and keep working towards your goals.
+            </p>
 
-          <div class="why-icon">
-            📚
           </div>
-
-          <h3>
-            Learn Better
-          </h3>
-
-          <p>
-            Find useful materials to support
-            your studies.
-          </p>
-
-        </div>
-
-
-        <div class="why-item">
-
-          <div class="why-icon">
-            🚀
-          </div>
-
-          <h3>
-            Move Forward
-          </h3>
-
-          <p>
-            Discover resources that can help
-            you reach your goals.
-          </p>
 
         </div>
 
@@ -397,21 +278,24 @@
 
 
     <!-- CALL TO ACTION -->
-    <section class="cta-section">
+    <section class="cta">
 
-      <h2>
-        Ready to start learning?
-      </h2>
+      <div class="section-container">
 
-      <p>
-        Explore Zam Study Web and find
-        resources to help you succeed.
-      </p>
+        <h2>
+          Ready to Start Learning?
+        </h2>
 
-      <a href="study-materials.html"
-         class="cta-button">
-        Start Exploring →
-      </a>
+        <p>
+          Explore our study resources and take the next
+          step towards your academic goals.
+        </p>
+
+        <a href="study-materials.html" class="button button-white">
+          Start Studying →
+        </a>
+
+      </div>
 
     </section>
 
@@ -421,54 +305,73 @@
   <!-- FOOTER -->
   <footer class="site-footer">
 
-    <div class="footer-logo">
-      🎓 Zam Study Web
+    <div class="footer-container">
+
+      <div class="footer-brand">
+
+        <h3>
+          🇿🇲 Zam Study Web
+        </h3>
+
+        <p>
+          Empowering Zambian students through knowledge,
+          resources and education.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Quick Links
+        </h4>
+
+        <a href="index.html">Home</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="scholarships.html">Scholarships</a>
+        <a href="tools.html">Student Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+      </div>
+
     </div>
 
-    <p>
-      Learn. Prepare. Succeed.
-    </p>
 
-    <div class="footer-links">
+    <div class="footer-bottom">
 
-      <a href="index.html">Home</a>
-
-      <a href="study-materials.html">
-        Study Materials
-      </a>
-
-      <a href="scholarships.html">
-        Scholarships
-      </a>
-
-      <a href="about.html">
-        About
-      </a>
-
-      <a href="contact.html">
-        Contact
-      </a>
+      <p>
+        © 2026 Zam Study Web. All rights reserved.
+      </p>
 
     </div>
-
-    <p class="copyright">
-      © 2026 Zam Study Web. All rights reserved.
-    </p>
 
   </footer>
 
 
-  <!-- MENU SCRIPT -->
+  <!-- MOBILE MENU SCRIPT -->
   <script>
 
     function toggleMenu() {
 
-      const menu =
-        document.getElementById("mobileMenu");
+      const nav = document.getElementById("mainNav");
 
-      menu.classList.toggle("show");
+      nav.classList.toggle("show");
 
     }
+
+
+    // Close menu when a link is clicked
+    document.querySelectorAll("#mainNav a").forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        document.getElementById("mainNav").classList.remove("show");
+
+      });
+
+    });
 
   </script>
 
