@@ -1,0 +1,301 @@
+/* ================================
+   ZAM STUDY WEB
+   Main Website Styles
+   ================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7f6;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ================================
+   GENERAL
+   ================================ */
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+.site-header {
+  background: #087443;
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
+}
+
+.site-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 8px;
+}
+
+.site-header p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+.navbar {
+  background: #075b35;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.navbar a:hover {
+  background: #0a7546;
+}
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+  background: linear-gradient(
+    135deg,
+    #e8f5ee,
+    #ffffff
+  );
+  text-align: center;
+  padding: 80px 15px;
+}
+
+.hero h2 {
+  color: #075b35;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+
+.button,
+.card-button {
+  display: inline-block;
+  background: #087443;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button {
+  padding: 13px 24px;
+}
+
+.card-button {
+  padding: 10px 18px;
+  margin-top: 15px;
+}
+
+.button:hover,
+.card-button:hover {
+  background: #064d2d;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   FEATURES
+   ================================ */
+
+.features {
+  padding: 65px 0;
+}
+
+.features h2,
+.welcome h2 {
+  text-align: center;
+  color: #075b35;
+  font-size: 2rem;
+  margin-bottom: 35px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 30px 22px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e3e8e5;
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: #075b35;
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+}
+
+/* ================================
+   WELCOME
+   ================================ */
+
+.welcome {
+  background: white;
+  padding: 65px 15px;
+  text-align: center;
+}
+
+.welcome p {
+  max-width: 750px;
+  margin: 0 auto 15px;
+  color: #555;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+  background: #063d25;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+/* ================================
+   TABLET
+   ================================ */
+
+@media (max-width: 800px) {
+
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navbar a {
+    padding: 13px 14px;
+  }
+
+}
+
+/* ================================
+   PHONE
+   ================================ */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 94%;
+  }
+
+  .site-header {
+    padding: 28px 12px;
+  }
+
+  .navbar a {
+    padding: 11px 10px;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 55px 15px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .features,
+  .welcome {
+    padding: 45px 0;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 25px 20px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+}
+
+/* ================================
+   SMALL PHONES
+   ================================ */
+
+@media (max-width: 380px) {
+
+  .navbar a {
+    padding: 9px 7px;
+    font-size: 0.82rem;
+  }
+
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+
+}
